@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :discussions, dependent: :destroy
   has_many :channels, through: :discussions 
+
+  validates :username, presence: true, uniqueness: true
 end
