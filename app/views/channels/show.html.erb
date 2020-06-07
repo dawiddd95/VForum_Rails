@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Channel:</strong>
-  <%= @channel.channel %>
-</p>
+<div class='channel-wrapper'>
+  <p>
+    <strong>Channel:</strong>
+    <%= @channel.channel %>
+  </p>
 
-<%= link_to 'Edit', edit_channel_path(@channel) %> |
-<%= link_to 'Back', channels_path %>
+  <%= link_to 'Edit', edit_channel_path(@channel) %> |
+  <%= link_to 'Back', channels_path %>
+</div>

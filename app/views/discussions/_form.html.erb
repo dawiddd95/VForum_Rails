@@ -1,36 +1,46 @@
-<%= simple_form_for(@discussion) do |f| %>
-  <%= f.error_notification %>
+<%= stylesheet_link_tag "form" %>
 
-  <div class="field">
-    <div class="control">
-      <%= f.input :title, required: true, input_html: { class: 'input' }, wrapper: false, label_html: { class: "label" } %>
-    </div>
-  </div>
+<div class='wrapper register'>
+	<%= simple_form_for(@discussion) do |f| %>
+		<div class="wrapper__form">
+			<div class='field'>
+				<%= f.input :title, :error => false,
+					required: true,
+					autofocus: true,
+					wrapper: false,
+					label: 'Title:',
+					input_html: { class: "input", id: 'username'},
+					label_html: { class: "label" }
+				%>
+			</div>
+			
+			<div class='field'>
+				<%= f.input :content, :error => false,
+					required: true,
+					wrapper: false,
+					label: 'Content:',
+					input_html: { class: "textarea"},
+					label_html: { class: "label" }
+				%>
+			</div>
 
-  <div class="field">
-    <div class="control">
-      <%= f.input :content, required: true, input_html: { class: 'textarea' }, wrapper: false, label_html: { class: "label" } %>
-    </div>
-  </div>
+      <div class="field">
+        <label class="label">Channel</label>
+        <div class="control has-icons-left">
+          <span class="select">
+            <%= f.input_field :channel_id, collection: @channels.map { |c| [c.channel, c.id] }, prompt: "Select channel" %>
+          </span>
+          <span class="icon is-small is-left">
+            <i class="fa fa-tag"></i>
+          </span>
+        </div>
+      </div>
 
-  <div class="field">
-    <label class="label">Channel</label>
-    <div class="control has-icons-left">
-      <%# Bulma do stworzenia select, ten select jes tdo wyboru channelu %>
-      <span class="select">
-        <%# collection iteruje nam po channelach, .map dla każdego channelu pokazuje jego channel czyli nazwa, bo zamiast name podaliśmy w modelu channel oraz id channelu  %>
-        <%= f.input_field :channel_id, collection: @channels.map { |c| [c.channel, c.id] }, prompt: "Select channel" %>
-      </span>
-      <span class="icon is-small is-left">
-        <i class="fa fa-tag"></i>
-      </span>
-    </div>
-  </div>
 
-  <div class="field">
-    <div class="control">
-      <%= f.button :submit, class:"button is-info" %>
-    </div>
-  </div>
-
-<% end %>
+			<div class="form-actions">
+				<%= f.button :submit, "SAVE", class: "button" %>
+        <%= link_to 'Back', discussions_path %>
+			</div>
+		</div>
+	<% end %>
+</div>

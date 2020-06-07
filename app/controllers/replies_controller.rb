@@ -13,6 +13,7 @@ class RepliesConstroller < ApplicationController
             format.js renders create.js.erb
          else
             format.html { redirect_to discussion_path(@discussion), notice: 'Reply did not save. Please try again' }
+         end
       end
    end
 
@@ -35,8 +36,9 @@ class RepliesConstroller < ApplicationController
          if @reply.update(reply_params)
             format.html { redirect_to discussion_path(@discussion), notice: 'Reply was succesfully updated' }
          else
-            format.html { render: 'edit' }
+            format.html { render :edit }
             format.json { render json: @reply.errors, status: :unprocessable_entity }
+         end
       end
    end
    
