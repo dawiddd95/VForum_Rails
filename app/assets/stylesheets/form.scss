@@ -1,0 +1,158 @@
+.register {
+   background-image: url('https://www.wildflowersandpixels.co.uk/wp-content/uploads/2017/02/Own-Your-Quirks-Free-Wallpaper.jpg');
+}
+
+.login {
+   background-image: url('https://c0.wallpaperflare.com/preview/936/202/464/blog-business-copywriter-couch.jpg');
+}
+
+.wrapper {
+   width: 100%;
+   height: 100%;
+   padding: 80px 0;
+   background-size: cover;
+   background-position: center;
+
+   .wrapper__header {
+      margin: 20px 0 30px 10px;
+      font-weight: bold;
+      font-family: sans-serif;
+      font-size: 25px;
+      color: rgba(0,0,0,0.65);
+   }
+
+   .alert {
+      width: 90%;
+      margin: 0 0 0 20px;
+      padding: 20px;
+      background-color: #F8D7DA;
+      color: #C89499;
+      border-color: #C89499;
+      border-radius: 4px;
+   }
+
+   .error {
+      margin: 10px;
+   }
+
+   .wrapper__form {
+      width: 50%;
+      padding: 20px;
+      border: 1px solid #e9e9e9;
+      border-radius: 4px;
+      background-color: white;
+      margin: 40px;
+   }
+
+   .field {
+      width: 90%;
+      height: 100%;
+      margin: 20px;
+
+      display: flex;
+      flex-direction: column;
+   }
+
+   .label {
+      width: 100%;
+      height: 40px;
+
+      display: flex;
+      align-items: center;
+   }
+
+   .input {
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 40px;
+      max-height: 100px;
+      padding: 0 15px;
+      border: 0;
+      outline: 0;
+      border: 1px solid #e9e9e9;   
+      border-radius: 5px;
+      font-weight: 200;
+      font-size: 16px;
+      color: rgba(0,0,0,0.65);
+      transition: 0.3s;
+      
+      &:hover {
+         transition: 0.3s;
+         border: 1px solid #1890FF;
+      }
+      
+      &:focus {
+         border: 1px solid #1890FF;
+         box-shadow: 0 0 0 2px rgba(100,181,255, 0.5);
+      }
+   };
+
+   .textarea {
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 40px;
+      max-height: 100px;
+      padding-top: 15px;
+   }
+   
+   
+   .remember-me {
+      height: 20px;
+      margin: 0 0 0 20px;
+      font-size: 14px;
+
+      display: flex;
+
+      .checkbox {
+         width: 20px;
+         height: 20px;
+         margin: 0 10px 0 0;
+      }
+
+      p {
+         margin: 2px;
+      }
+   }
+
+   .form-actions {
+      width: 100%;
+      display: flex;
+      align-items: center;
+   }
+
+   .button {
+      width: 90%;
+      height: 40px;
+      padding: 0 15px;
+      margin: 40px 20px 20px 20px;
+      font-size: 16px;
+      font-family: sans-serif;
+      color: white;
+      border: 0;
+      border-radius: 4px;
+      background-color: #1890FF;
+      outline: 0;
+      transition: .3s;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+         background-color: #64b5ff;
+         border-color: #97cdff;
+         box-shadow: 0 0 0 2px rgba(100,181,255, 0.5);
+         transition: .3s;
+      }
+   }
+
+   .back-btn {
+      width: 65px;
+      margin: 17px 0 0 0;
+      font-size: 16px;
+      text-decoration: none;
+      color: #1890FF;
+
+      display: flex;
+      justify-content: space-between;
+   }
+}

@@ -17,6 +17,86 @@
 @import "bulma";
 @import "functions";
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.fa { font-family: 'FontAwesome' !important; } 
+
+.navbar {
+   width: 100%;
+   height: 100px;
+   color: #333333;
+   background-color: white;
+   box-shadow: 7px 7px 7px 0 rgba(0,0,0,0.2);
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.navbar__brand {
+   margin: 0 0 0 30px; 
+   font-weight: bold;
+   font-size: 30px;
+}
+
+.navbar__links {
+   width: 50%;
+   margin: 0 80px 0 0;
+
+   display: flex;
+   justify-content: flex-end;
+}
+
+.navbar__links--footer {
+  margin: 40px auto;
+
+  a {
+    margin: 0 20px;
+  }
+}
+
+.navbar__links__link {
+  margin: 0 40px 0 0;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: #000;
+  text-decoration: none;
+}
+
+.container-app {
+   width: 90%;
+   margin: 0 auto;
+}
+
+footer {
+   width: 100%;
+   height: 400px;
+   margin: 40px 0 0 0;
+   background-color: white;
+   color: black;
+   font-weight: bold;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+
+   p:nth-child(1) {
+      margin: 100px 0 0 40px;
+      font-size: 50px;
+      font-family: sans-serif;
+   }
+
+   .copyright {
+      margin: 70px 0 0 40px;
+      font-size: 14px;
+      font-family: sans-serif;
+   }
+}
+
 .image {
   border-radius: 50%;
   img {
@@ -26,13 +106,6 @@
 
 .notification:not(:last-child) {
   margin-bottom: 0;
-}
-
-.textarea {
-  height: 250px;
-  font-family: Monaco, san-serif;
-  font-size: .9rem;
-  padding: 1rem;
 }
 
 .discussion-title {
