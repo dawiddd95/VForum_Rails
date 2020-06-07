@@ -1,4 +1,8 @@
-<div class="channel-wrapper">
-   <h1 class='title is-3'>Editing Channel</h1>
-   <%= render 'form', channel: @channel %>
-</div>
+<% if has_role?(:admin) || has_role?(:moderator) %>
+   <div class="channel-wrapper">
+      <h1 class='title is-3'>Editing Channel</h1>
+      <%= render 'form', channel: @channel %>
+   </div>
+<% else %>
+   <%= render 'shared/unauthorized' %>
+<% end %>

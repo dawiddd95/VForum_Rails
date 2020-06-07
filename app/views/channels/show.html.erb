@@ -6,6 +6,9 @@
     <%= @channel.channel %>
   </p>
 
-  <%= link_to 'Edit', edit_channel_path(@channel) %> |
+  <% if has_role?(:admin) || has_role?(:moderator) %>
+    <%= link_to 'Edit', edit_channel_path(@channel) %> |
+  <% end %>
+  
   <%= link_to 'Back', channels_path %>
 </div>
