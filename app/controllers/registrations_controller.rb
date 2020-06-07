@@ -2,11 +2,7 @@ class RegistrationsController < Devise::RegistrationsController
    after_action :assign_role
    def assign_role
       if User.all.count == 1 
-         User.add_role :admin
-      elsif User.all.count == 2 
-         User.add_role :moderator
-      else
-         User.add_role :user
+         User.first.add_role :admin
       end
    end
 
