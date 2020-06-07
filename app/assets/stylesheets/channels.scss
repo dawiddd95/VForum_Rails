@@ -4,7 +4,33 @@
 
 
 .channels-wrapper, .channel-wrapper {
-   margin: 130px 0 130px 0;
+   margin: 30px 0 30px 0;
+   min-height: 30vh;
+   border: 1px solid white;
+
+   h2 {
+      margin: 30px 0 0 0;
+      font-weight: bold;
+      font-size: 20px;
+      color: #333333;
+   }
+
+   .articles {
+      margin: 30px 0 0 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      .article {
+         display: flex;
+         justify-content: flex-start; 
+      }
+
+      .link {
+         font-size: 18px;
+         margin: 0 20px 0 0;
+      }
+   }
 }
 
 .column {
