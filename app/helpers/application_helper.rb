@@ -1,18 +1,17 @@
 module ApplicationHelper
-   # Importujemy plugin redcarpet do modułu
    require 'redcarpet/render_strip'
 
-   # Klasa łącząca redcarpet i coderay
+   def has_role?(role)
+      current_user && current_user.has_role?(role)
+   end
+
    class CodeRayIfy < Redcarpet::Render::HTML
       def block_code(code, language)
          CodeRay.scan(code, language).div
       end
    end
 
-   # Metoda, która będzie przetwarzać tekst na znacznik HTML
-   # Jest ona naszym helperem
    def markdown(text)
-      # Tworzymy obiekt klasy CodeRayIfy
       code_ray_ified = CodeRayIfy.new(:filter_html => true, :hard_wrap => true)
       
       options = {
@@ -33,4 +32,5 @@ module ApplicationHelper
       markdown_to_plain_text = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
       markdown_to_plain_text.render(text).html_safe
    end
+
 end

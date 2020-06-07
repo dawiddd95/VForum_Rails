@@ -16,8 +16,10 @@
   <div class="field">
     <label class="label">Channel</label>
     <div class="control has-icons-left">
+      <%# Bulma do stworzenia select, ten select jes tdo wyboru channelu %>
       <span class="select">
-        <%= f.input_field :channel_id, collection:@channels.map { |c| [c.channel, c.id] }, prompt: "Select channel" %>
+        <%# collection iteruje nam po channelach, .map dla każdego channelu pokazuje jego channel czyli nazwa, bo zamiast name podaliśmy w modelu channel oraz id channelu  %>
+        <%= f.input_field :channel_id, collection: @channels.map { |c| [c.channel, c.id] }, prompt: "Select channel" %>
       </span>
       <span class="icon is-small is-left">
         <i class="fa fa-tag"></i>

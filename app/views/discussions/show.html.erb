@@ -5,7 +5,11 @@
     <div class="level">
       <div class="level-left"></div>
       <div class="level-right">
+
+        <%# Wywołanie helpera sprawdzającego czy jestem autorem dyskusji %>
+        <%# Ten helper zostanie stworzony później %>
         <% if discussion_author(@discussion) %>
+        <%# To może edytować i ususwać %>
         <div class="buttons">
             <%= link_to 'Edit Discussion', edit_discussion_path(@discussion), class:'button'%>
             <%= link_to 'Delete', discussion_path(@discussion), method: :delete, data: { confirm: "Delete discussion?" }, class:'button' %>
@@ -18,15 +22,21 @@
     <h2 class="subtitle is-5 has-text-grey"><%= @discussion.replies.count %> Replies</h2>
 
     <div id="discussion-replies">
+      <%# Renderuje odpowiedzi do dyskusji %>
       <%= render @discussion.replies %>
     </div>
 
     <hr />
 
     <h3 class="subtitle is-3 has-text-grey">Leave a reply</h3>
+    <%# Jeśli user jest zalogowany %>
     <% if user_signed_in? %>
+      <%# To może widzieć formualrz do dodania odpowiedzi i dodawać te odpowiedzi %>
+      <%# Formualarz do dodawania odpowiedzi %>
       <%= render 'replies/form' %>
+    <%# W przeciwnym wypadku, jeśli nie jest zalogowany %>
     <% else %>
+      <%# To pokaż tę informację dla niezalogowanego %>
       <p>To reply you need to <%= link_to 'login', new_user_session_path %>. Don't have an account?
       <%= link_to 'Sign up', new_user_registration_path %> for one.</p>
     <% end %>

@@ -1,3 +1,8 @@
+<%# Definicja formularzu to simple_form_for jest to jak tag <form></form> %>
+<%# po simple_form_for podajemy dla jakiego modelu np: simple_form_for(@user) %>
+<%# W przypadku przypisania odpowiedzi do dyskusji piszemy jak poniżej  %>
+<%# paramter remote: true sprawia że nie musimy odświeżać strony żeby zobaczyć nowe odpowiedzi %>
+<%# Przypisanie usera do dyskusji nie musiało mieć takiego zapisu bo przypsanie usera do dyskusji było na poziomie kontrolera %>
 <%= simple_form_for([@discussion, @discussion.replies.build], remote: true) do |f| %>
 
 <div class="field">

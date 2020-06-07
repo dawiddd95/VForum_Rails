@@ -10,6 +10,7 @@ class RepliesConstroller < ApplicationController
       respond_to do |format|
          if @reply.save
             format.html { redirect_to discussion_path(@discussion) }
+            format.js renders create.js.erb
          else
             format.html { redirect_to discussion_path(@discussion), notice: 'Reply did not save. Please try again' }
       end
@@ -30,7 +31,6 @@ class RepliesConstroller < ApplicationController
 
    def update
       @reply = @discussion.replies.find(params[:id])
-
       respond_to do |format|
          if @reply.update(reply_params)
             format.html { redirect_to discussion_path(@discussion), notice: 'Reply was succesfully updated' }
@@ -53,4 +53,5 @@ class RepliesConstroller < ApplicationController
    def reply_params
       params.require(:reply).permit(:reply)
    end
+
 end

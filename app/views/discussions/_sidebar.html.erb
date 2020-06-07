@@ -1,0 +1,16 @@
+<div class="column is-3 is-offset-1">
+   <h3 class="title is-5 has-text-grey-light">Channels</h3>
+
+   <ul class="list">
+      <%# Zwróć linki do wszystkich kanałów %>
+      <% @channels.each do |channel| %>
+         <li><%= link_to channel.channel, channel %></li>
+      <% end %>
+   </ul>
+
+   <br/>
+
+   <%# Jeśli jesteś adminem, możesz tworzyć nowy channel %>
+   
+
+</div>
