@@ -9,4 +9,6 @@ class Discussion < ApplicationRecord
    validates :content,
       presence: {message: 'Content is required'}, 
       length: {minimum: 3, message: 'Content must at least contain 3 letters'}
+
+   resourcify
 end

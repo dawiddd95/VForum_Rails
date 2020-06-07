@@ -5,6 +5,8 @@
 	<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 		<div class="wrapper__form">
 			<h2 class='wrapper__header'>LOG IN</h2>
+			<p class='info'><strong>For admin use:</strong> admin@gmail.com <strong>pass:</strong> Qwedsa123</p>
+			<p class='info'><strong>For moderator:</strong> moderator@gmail.com <strong>pass:</strong> Qwedsa123</p>
 			<%= f.error :base %>
 			<div class='field'>
 				<%= f.input :email,
