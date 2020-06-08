@@ -32,7 +32,11 @@ rails db:setup
 ```
 5. Wait until is done
 6. Your app is ready!
-7. Now go to http://localhost:3000/ in your web browser url
+7. Run in your command Ruby on Rails server
+```bash
+rails s
+```
+8. Now go to http://localhost:3000/ in your web browser url
 
 ### Usage
 
