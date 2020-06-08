@@ -10,7 +10,7 @@ During development.
 
 1. Run this command in catalog of your choice: 
 ```bash
-git clone https://github.com/dawiddd95/Forum_Rails.git
+git clone https://github.com/dawiddd95/VForum_Rails.git
 ```
 2. In terminal go now to VForum_Rails created catalog
 ```bash
@@ -40,4 +40,4 @@ rails db:setup
 2. As admin you can do everything just login as admin with:  admin@gmail.com => Qwedsa123
 3. As moderator you can delete all elements, just login as moderator with:  moderator@gmail.com => Qwedsa123
 4. As logged user you can only delete and edit you own elements
-5. As not logged in you can only read everything
+5. As not logged in user, you can only read everything
