@@ -24,6 +24,12 @@
       <% end %>
    </div>
 
+   <form action="/search" class="search-form">
+      <input type="text" name="q" placeholder="Filter discussions by title">
+      <button type="submit">Filter</button>
+   </form>
+
+
    <div class="discussions">
       
       <% if user_signed_in? %>

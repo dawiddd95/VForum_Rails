@@ -14,6 +14,10 @@ class DiscussionsController < ApplicationController
     end
   end
 
+  def search
+    @discussions = Discussion.where("title LIKE ?", "%"+ params[:q] +"%")
+  end
+
   # GET /discussions/1
   # GET /discussions/1.json
   def show

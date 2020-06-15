@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 
   root 'discussions#index'
 
+  get 'search', to: 'discussions#search'
+
   devise_for :users, controllers: {registrations: 'registrations'}
 end

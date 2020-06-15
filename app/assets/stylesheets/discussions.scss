@@ -4,7 +4,7 @@
 
 .filters {
    height: 40px;
-   margin: 0 0 40px 0;
+   margin: 0 0 20px 0;
 
    display: flex;
 }
@@ -19,6 +19,59 @@
    display: flex;
    align-items: center;
    justify-content: center;
+}
+
+.search-form {
+   width: 80%;
+   height: 40px;
+   margin: 0 0 20px 0;
+
+   display: flex;
+   align-items: center;
+
+   input {
+      width: 80%;
+      height: 100%;
+      padding: 0 15px;
+      border: 0;
+      outline: 0;
+      border: 1px solid #e9e9e9;   
+      border-radius: 5px;
+      font-weight: 200;
+      font-size: 16px;
+      color: rgba(0,0,0,0.65);
+      transition: 0.3s;
+
+      &:hover {
+         transition: 0.3s;
+         border: 1px solid #1890FF;
+      }
+      
+      &:focus {
+         border: 1px solid #1890FF;
+         box-shadow: 0 0 0 2px rgba(100,181,255, 0.5);
+      }
+   }
+
+   button {
+      height: 100%;
+      margin: 0 0 0 10px;
+      padding: 0 20px;
+      font-family: sans-serif;
+      color: white;
+      border: 0;
+      border-radius: 4px;
+      background-color: #1890FF;
+      outline: 0;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover {
+         border-color: #97cdff;
+         box-shadow: 0 0 0 2px rgba(100,181,255, 0.5);
+         transition: .3s;
+      }
+   }
 }
 
 .discussions-wrapper, .sidebar-wrapper, .discussion-wrapper {
