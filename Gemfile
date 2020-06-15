@@ -7,7 +7,9 @@ end
 
 group :development, :test do
   gem 'rspec-rails', ">= 3.9.0"
+  gem 'factory_girl_rails', '4.2.1'
 end
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -46,6 +48,7 @@ gem 'cancancan', '~> 2.1', '>= 2.1.3'
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
+gem "font-awesome-rails" 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

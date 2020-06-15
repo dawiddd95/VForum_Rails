@@ -13,3 +13,18 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function () {
+	$notice = $('.notification')
+	$filterLink = $('.filters').find('.filters__link')
+
+	$notice.slideDown( function() {
+		$notice.delay(2000)
+		$notice.slideUp()
+	})
+
+	$filterLink.click( function() {
+		$(this).css({color: 'red'})
+	})
+});

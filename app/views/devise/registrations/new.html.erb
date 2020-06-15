@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "form" %>
 
 <div class='wrapper register'>
-	<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+	<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: :register_form}) do |f| %>
 		<div class="wrapper__form">
 			<h2 class='wrapper__header'>SIGN UP</h2>
 
@@ -21,8 +21,8 @@
 					autofocus: true,
 					wrapper: false,
 					label: 'Username:',
-					input_html: { class: "input", id: 'username'},
-					label_html: { class: "label" }
+					input_html: { class: "input input-username"},
+					label_html: { class: "label label-username" }
 				%>
 			</div>
 			
@@ -31,8 +31,8 @@
 					required: true,
 					wrapper: false,
 					label: 'Email:',
-					input_html: { class: "input", id: 'email'},
-					label_html: { class: "label" }
+					input_html: { class: "input input-email"},
+					label_html: { class: "label label-email" }
 				%>
 			</div>
 
@@ -41,8 +41,8 @@
 					required: true,
 					wrapper: false,
 					label: 'Password:',
-					input_html: { class: "input"},
-					label_html: { class: "label" }
+					input_html: { class: "input input-password"},
+					label_html: { class: "label label-password" }
 				%>
 			</div>
 			
@@ -51,8 +51,8 @@
 					required: true,
 					wrapper: false,
 					label: 'Confirm password:',
-					input_html: { class: "input"},
-					label_html: { class: "label" }
+					input_html: { class: "input input-confirm"},
+					label_html: { class: "label label-confirm"}
 				%>
 			</div>
 

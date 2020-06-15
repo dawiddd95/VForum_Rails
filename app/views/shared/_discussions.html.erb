@@ -1,6 +1,29 @@
 
 <div class="column is-8 discussions-wrapper">
    <h3 class="title is-5 has-text-grey-light">Latest Discussions</h3>
+   <div class="title is-6">Filter by:</div>
+   
+   <div class='filters'>
+      <%= link_to discussions_path, class: 'filters__link', id: 'filter_by_all' do %>
+         All
+      <% end %>
+      <%= link_to discussions_path(channel_name: "Sport"), class: 'filters__link', id: 'filter_by_sport' do %>
+         Sport
+      <% end %>
+      <%= link_to discussions_path(channel_name: "Health"), class: 'filters__link', id: 'filter_by_health' do %>
+         Health
+      <% end %>
+      <%= link_to discussions_path(channel_name: "Business"), class: 'filters__link', id: 'filter_by_business' do  %>
+         Business
+      <% end %>
+      <%= link_to discussions_path(channel_name: "Fashion"), class: 'filters__link', id: 'filter_by_fashion' do  %>
+         Fashion
+      <% end %>
+      <%= link_to discussions_path(channel_name: "Lifestyle"), class: 'filters__link', id: 'filter_by_lifestyle' do  %>
+         Lifestyle
+      <% end %>
+   </div>
+
    <div class="discussions">
       
       <% if user_signed_in? %>

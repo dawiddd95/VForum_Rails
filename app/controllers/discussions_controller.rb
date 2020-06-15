@@ -6,7 +6,12 @@ class DiscussionsController < ApplicationController
   # GET /discussions
   # GET /discussions.json
   def index
-    @discussions = Discussion.all.order('created_at desc')
+    if(params.has_key?(:channel_name)) 
+      @channel = Channel.where(channel: params[:channel_name])
+      @discussions = Discussion.where(channel_id: @channel.ids).order('created_at desc')
+    else
+      @discussions = Discussion.all.order('created_at desc')
+    end
   end
 
   # GET /discussions/1
